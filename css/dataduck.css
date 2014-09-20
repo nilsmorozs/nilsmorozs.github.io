@@ -1,0 +1,103 @@
+body {
+  background-color: #6591cd;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: medium;
+  line-height: 18pt;
+}
+td {
+  vertical-align: top;
+}
+h1 {
+  font-family: Arial,Helvetica,sans-serif;
+  color: black;
+  font-size: x-large;
+}
+h2 {
+  font-size: large;
+  color: #003300;
+}
+a {
+  color: #003300;
+}
+.layouttable {
+  min-height: 928px;
+  height: 928px;
+  width: 880px;
+  max-width: 880px;
+  text-align: left;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #bed3ee;
+}
+.logocell {
+  padding: 0px;
+  height: 152px;
+  max-height: 152px;
+  text-align: center;
+  vertical-align: middle;
+  width: 148px;
+  max-width: 148px;
+ /* background-color: #6591cd;
+*/}
+.titlecell {
+  border-left: medium solid #6591cd;
+  vertical-align: middle;
+  font-weight: bold;
+  font-style: normal;
+  max-width: 700px;
+  width: 700px;
+  color: #003300;
+  font-size: x-large;
+  font-family: Arial,Helvetica,sans-serif;
+  text-align: left;
+}
+.footercell {
+  border-left: medium solid #6591cd;
+  text-align: center;
+  vertical-align: middle;
+  min-height: 30px;
+  height: 30px;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: small;
+  color: #003300;
+}
+.contentcell {
+  border-top: medium solid #6591cd;
+  border-left: medium solid #6591cd;
+  border-bottom: medium solid #6591cd;
+}
+.menucell {
+  border-top: medium solid #6591cd;
+  border-bottom-width: medium;
+  border-bottom-color: #6591cd;
+  border-right-width: medium;
+  border-right-color: #6591cd;
+}
+td.logocell *|img {
+/*  max-height: 141px;
+  height: 139 px;
+  max-width: 141px;
+  width: 139px;
+*/
+  max-height: 85%;
+  height: 85%;
+  max-width: 85%;
+  width: 85%;
+}
+td.menucell *|a {
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: medium;
+  color: #003300;
+  text-decoration: none;
+  line-height: 20pt;
+  font-weight: normal;
+  font-style: normal;
+}
+td.menucell *|a:hover {
+  margin-left: 4pt;
+  color: #663300;
+}
+td.titlecell *|h1 {
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: xx-large;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+  
+  <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+  <title>Nils Morozs: Control Demo</title>
+
+  
+  
+  <style type="text/css"></style>
+  
+  <link type="text/css" href="css/dataduck.css" rel="stylesheet">
+
+</head><body>
+<table class="layouttable" summary="A table used for site layout" border="0" cellpadding="6" cellspacing="0">
+
+  <tbody>
+    <tr>
+      <td class="logocell"><a href="index.html"><img style="border: 0px solid ;" alt="Portrait" src="img/23mar2014.jpg"></a></td>
+      <td class="titlecell">
+      <h1>Nils Morozs</h1>
+      <p>Control Demo</p>
+      </td>
+    </tr>
+    <tr>
+      <td class="menucell"><a href="index.html">Home</a><br>
+      <a href="publications.html">Publications</a><br>
+      <a href="cv.html">CV</a><br>
+      <a href="control_demo.html">Control Demo</a><br>
+      </td>
+      <td class="contentcell">
+      <h2>2D version of a rotary inverted pendulum with swing-up
+and balance controllers</h2>
+      <p>Here is my first JavaScript demo. It runs a simulation
+model of a rotary inverted pendulum (RIP) system, where a freely
+rotating pole is attached to a horizontally rotating arm driven by a
+gearbox connected to a motor underneath. It is portrayed as a linear
+cart-pole system here, since simple 2D graphics could be used to
+display it.</p>
+      <p>This is a detailed non-linear model of an actual RIP
+system from the Department of Electronics at York. Most notably, it
+includes the effects of gearbox backlash. It uses a full state feedback
+controller for balancing and an energy-based controller for the
+swing-up stage. The user interface below allows you to change the
+coefficients of the control laws (gains), where &#945; is the angular
+position of the pendulum and &#952;m is the angular position of the motor's
+rotor which drives the arm (if not for gearbox backlash, it would be
+directly proportional to the linear position of the pendulum's pivot
+point). The system input is the voltage applied to the motor (V<sub>m</sub>).
+You can also choose to include or exclude the effects of
+gearbox backlash in the simulation. </p>
+      <p><b>Balance controller:</b>
+V<sub>m</sub> = <input id="k1" value="0.005" size="4" type="text"> &#952;<sub>m</sub>
++ <input id="k2" value="0.04" size="4" type="text">
+&#952;'<sub>m</sub> - <input id="k3" value="6" size="4" type="text"> &#945; - <input id="k4" value="0.8" size="4" type="text"> &#945;'
+      </p>
+      <p><b>Swing-up controller:</b>
+V<sub>m</sub> = <input id="gain_X" value="0.17" size="4" type="text">&#945;'
+cos(&#945;)
+      </p>
+      <p><b>Include gearbox backlash</b> <input id="backlash_checkbox" checked="checked" type="checkbox"></p>
+      <button type="button" id="run_button">Restart
+simulation</button>
+      <canvas id="rip_canvas" width="695" height="200" style="border: 1px solid rgb(0, 0, 0);"></canvas></td>
+    </tr>
+    <tr>
+      <td> <br>
+      </td>
+      <td class="footercell">Nils Morozs 2014</td>
+    </tr>
+  </tbody>
+</table>
+
+<script src="js/rip_model.js"></script>
+</body></html>
