@@ -51,10 +51,10 @@ gearbox backlash in the simulation. </p>
       <p><b>Balance controller:</b>
 V<sub>m</sub> = <input id="k1" value="0.005" size="4" type="text"> &#952;<sub>m</sub>
 + <input id="k2" value="0.04" size="4" type="text">
-&#952;'<sub>m</sub> - <input id="k3" value="6" size="4" type="text"> &#945; - <input id="k4" value="1" size="4" type="text"> &#945;'
+&#952;'<sub>m</sub> - <input id="k3" value="6" size="4" type="text"> &#945; - <input id="k4" value="0.8" size="4" type="text"> &#945;'
       </p>
       <p><b>Swing-up controller:</b>
-V<sub>m</sub> = <input id="gain_X" value="0.2" size="4" type="text">&#945;'
+V<sub>m</sub> = <input id="gain_X" value="0.17" size="4" type="text">&#945;'
 cos(&#945;)
       </p>
       <p><b>Include gearbox backlash</b> <input id="backlash_checkbox" checked="checked" type="checkbox"></p>
