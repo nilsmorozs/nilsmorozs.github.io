@@ -4,6 +4,7 @@
   <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
   <title>Nils Morozs: Control Demo</title>
 
+<!--
   <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -14,29 +15,29 @@
   ga('send', 'pageview');
 
 </script>
+-->
   
-  <style type="text/css"></style>
-  
-  <link type="text/css" href="css/dataduck.css" rel="stylesheet">
+  <link type="text/css" href="css/nilsmorozs.css" rel="stylesheet">
 
-</head><body>
-<table class="layouttable" summary="A table used for site layout" border="0" cellpadding="6" cellspacing="0">
-
-  <tbody>
-    <tr>
-      <td class="logocell"><a href="index.html"><img style="border: 0px solid ;" alt="Portrait" src="img/portrait.JPG"></a></td>
-      <td class="titlecell">
-      <h1>Nils Morozs</h1>
-      <p>Control Demo</p>
-      </td>
-    </tr>
-    <tr>
-      <td class="menucell"><a href="index.html">Home</a><br>
-      <a href="publications.html">Publications</a><br>
-      <a href="cv.html">CV</a><br>
-      <a href="control_demo.html">Control Demo</a><br>
-      </td>
-      <td class="contentcell">
+</head>
+<body>	
+<div class="Photo">
+	<img src="img/portrait.JPG"></img>
+</div>
+<div class="TitleArea">
+	<hr>
+	<h1>Nils Morozs</h1>
+	<h2>Home</h2>
+	<hr>
+</div>
+<div class="MenuArea">
+	<a href="index.html">Home</a> &nbsp;&nbsp;&nbsp;
+	<a href="publications.html">Publications</a> &nbsp;&nbsp;&nbsp;
+    <a href="cv.html">CV</a> &nbsp;&nbsp;&nbsp;
+    <a href="control_demo.html">Control Demo</a>
+	<hr>
+</div>
+<div class="MainPageArea" id ="MainPageArea">
       <h2>2D version of a rotary inverted pendulum with swing-up
 and balance controllers</h2>
       <p>Here is my first JavaScript demo. It runs a simulation
@@ -60,28 +61,23 @@ gearbox backlash in the simulation. </p>
       <p><b>Balance controller:</b>
 V<sub>m</sub> = <input id="k1" value="0.005" size="4" type="text"> &#952;<sub>m</sub>
 + <input id="k2" value="0.04" size="4" type="text">
-&#952;'<sub>m</sub> - <input id="k3" value="6" size="4" type="text"> &#945; - <input id="k4" value="1" size="4" type="text"> &#945;'
+&#952;'<sub>m</sub> - <input id="k3" value="7" size="4" type="text"> &#945; - <input id="k4" value="1" size="4" type="text"> &#945;'
       </p>
       <p><b>Swing-up controller:</b>
 V<sub>m</sub> = <input id="gain_X" value="0.2" size="4" type="text">&#945;'
 cos(&#945;)
       </p>
       <p><b>Include gearbox backlash</b> <input id="backlash_checkbox" checked="checked" type="checkbox"></p>
-      <button type="button" id="run_button">Restart
-simulation</button>
-      <canvas id="rip_canvas" width="695" height="200" style="border: 1px solid rgb(0, 0, 0);"></canvas>
+      <button type="button" id="run_button">Restart simulation</button><br>
+      <canvas id="rip_canvas" width="700" height="200" style="border: 1px solid rgb(0, 0, 0);"></canvas>
       <p>Here is a short video of the real system performing the same task:</p>
     <iframe width="560" height="315" src="//www.youtube.com/embed/IC8PydEJCXM" frameborder="0" allowfullscreen></iframe>
       
-      </td>
-    </tr>
-    <tr>
-      <td> <br>
-      </td>
-      <td class="footercell">Nils Morozs 2014, hosted by <a href="https://github.com/" target="_blank">GitHub</a></td>
-    </tr>
-  </tbody>
-</table>
-
+</div>
 <script src="js/rip_model.js"></script>
+
+<div class="FooterArea">
+<hr>
+Nils Morozs 2015, hosted by <a href="https://github.com/" target="_blank">GitHub</a>
+</div>
 </body></html>
