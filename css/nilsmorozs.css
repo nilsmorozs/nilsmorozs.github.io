@@ -97,8 +97,8 @@ div.MainHomepageArea *|a {
 }
 
 div.MainHomepageArea *|a:hover {
-    color: #000033;
-    background-color: #339900;
+    color: white;
+    background-color: #000066;
 }
 
 .FooterArea {
