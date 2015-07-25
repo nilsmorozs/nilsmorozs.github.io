@@ -81,18 +81,18 @@ div.MenuArea *|a:hover {
 }
 
 .MainHomepageArea {
-	margin-right: 100px; 
+	margin-right: 60px; 
 }
 
 div.MainHomepageArea *|a {
 	display: block;
     font-weight: bold;
-    font-size: 300%;
+    font-size: 250%;
     color: #CCCCCC;
     background-color: #000033;
     width: 100%;
     text-align: center;
-    padding: 50px;
+    padding: 30px;
     text-decoration: none;
 }
 
