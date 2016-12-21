@@ -1,84 +1,133 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html><head>
-  
-  <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
-  <title>Nils Morozs: Control Demo</title>
-
-  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-55027610-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
-  
-  <link type="text/css" href="css/nilsmorozs.css" rel="stylesheet">
-
+<!DOCTYPE html>
+<html lang="en">
+	
+<head>
+	<title>Nils Morozs: Control Demo</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/nilsmorozs.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-55027610-1', 'auto');
+		ga('send', 'pageview');
+	</script>
 </head>
-<body>	
-<div class="Photo">
-<a href="index.html">
-	<img src="img/portrait.JPG"></img>
-</a>
-</div>
-<div class="TitleArea">
-	<hr>
-	<h1>Nils Morozs</h1>
-	<h2>Control Demo</h2>
-	<hr>
-</div>
-<div class="MenuArea">
-	<a href="index.html">Home</a> &nbsp;&nbsp;&nbsp;
-	<a href="publications.html">Publications</a> &nbsp;&nbsp;&nbsp;
-    <a href="cv.html">CV</a> &nbsp;&nbsp;&nbsp;
-    <a href="control_demo.html">Control Demo</a> &nbsp;&nbsp;&nbsp;
-    <a href="rl.html">Reinforcement Learning</a>
-	<hr>
-</div>
-<div class="MainPageArea" id ="MainPageArea">
-      <h2>2D Version of a Rotary Inverted Pendulum with Swing-Up
-and Balance Controllers</h2>
-      <p>Here is my first JavaScript demo. It runs a simulation
-model of a rotary inverted pendulum (RIP) system, where a freely
-rotating pole is attached to a horizontally rotating arm driven by a
-gearbox connected to a motor underneath. It is portrayed as a linear
-cart-pole system here, since simple 2D graphics could be used to
-display it.</p>
-      <p>This is a detailed non-linear model of an actual RIP
-system from the Department of Electronics at York. Most notably, it
-includes the effects of gearbox backlash. It uses a full state feedback
-controller for balancing and an energy-based controller for the
-swing-up stage. The user interface below allows you to change the
-coefficients of the control laws (gains), where &#945; is the angular
-position of the pendulum and &#952;m is the angular position of the motor's
-rotor which drives the arm (if not for gearbox backlash, it would be
-directly proportional to the linear position of the pendulum's pivot
-point). The system input is the voltage applied to the motor (V<sub>m</sub>).
-You can also choose to include or exclude the effects of
-gearbox backlash in the simulation. </p>
-      <p><b>Balance controller:</b>
-V<sub>m</sub> = <input id="k1" value="0.005" size="4" type="text"> &#952;<sub>m</sub>
-+ <input id="k2" value="0.04" size="4" type="text">
-&#952;'<sub>m</sub> - <input id="k3" value="7" size="4" type="text"> &#945; - <input id="k4" value="1" size="4" type="text"> &#945;'
-      </p>
-      <p><b>Swing-up controller:</b>
-V<sub>m</sub> = <input id="gain_X" value="0.2" size="4" type="text">&#945;'
-cos(&#945;)
-      </p>
-      <p><b>Include gearbox backlash</b> <input id="backlash_checkbox" checked="checked" type="checkbox"></p>
-      <button type="button" id="run_button">Restart simulation</button><br>
-      <canvas id="rip_canvas" width="700" height="200" style="border: 1px solid rgb(0, 0, 0);"></canvas>
-      <p>Here is a short video of the real system performing the same task:</p>
-    <iframe width="560" height="315" src="//www.youtube.com/embed/IC8PydEJCXM" frameborder="0" allowfullscreen></iframe>
-      
-</div>
-<script src="js/rip_model.js"></script>
 
-<div class="FooterArea">
-<hr>
-Nils Morozs 2015, hosted on <a href="https://github.com/" target="_blank">GitHub</a>
+<body>
+	
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"></button>
+      <a class="navbar-brand" href="index.html">Nils Morozs</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+		<li><a href="index.html">Home</a></li>  
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="control_demo.html">Control Demo</a></li>
+        <li><a href="rl.html">Reinforcement Learning</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid bg-dark text-center">
+	<h1>Control Demo</h1>
 </div>
-</body></html>
+
+<div class="container-fluid bg-white" id="main_container">
+	
+	<h2>2D version of a rotary inverted pendulum with swing-up and balance controllers</h2>
+	
+	<p>
+		Here is my first JavaScript demo. It runs a simulation
+		model of a rotary inverted pendulum (RIP) system, where a freely
+		rotating pole is attached to a horizontally rotating arm driven by a
+		gearbox connected to a motor underneath. It is portrayed as a linear
+		cart-pole system here, since simple 2D graphics could be used to
+		display it.
+	</p>
+	<p>
+		This is a detailed non-linear model of an actual RIP
+		system from the Department of Electronics at York. Most notably, it
+		includes the effects of gearbox backlash. It uses a full state feedback
+		controller for balancing and an energy-based controller for the
+		swing-up stage. The user interface below allows you to change the
+		coefficients of the control laws (gains), where &#945; is the angular
+		position of the pendulum and &#952;m is the angular position of the motor's
+		rotor which drives the arm (if not for gearbox backlash, it would be
+		directly proportional to the linear position of the pendulum's pivot
+		point). The system input is the voltage applied to the motor (V<sub>m</sub>).
+		You can also choose to include or exclude the effects of
+		gearbox backlash in the simulation.
+	</p>
+	<p> 
+		<form class="form-inline">
+			<b>Balance controller:</b>
+			V<sub>m</sub> =
+			<div class="form-group">
+				<input id="k1" value="0.005" size=5 type="text" class="form-control"> 
+			</div>
+			&#952;<sub>m</sub> + 
+			<div class="form-group">
+				<input id="k2" value="0.04" size=5 type="text" class="form-control"> 
+			</div>
+			&#952;'<sub>m</sub> - 
+			<div class="form-group">
+				<input id="k3" value="7" size=5 type="text" class="form-control"> 
+			</div>
+			&#945; - 
+			<div class="form-group">
+				<input id="k4" value="1" size=5 type="text" class="form-control"> 
+			</div>
+			&#945;'
+		</form>
+	</p>
+	<p>
+		<form class="form-inline">
+			<b>Swing-up controller:</b>
+			V<sub>m</sub> = 
+			<div class="form-group">
+				<input id="gain_X" value="0.2" size=5 type="text" class="form-control"> 
+			</div>
+			&#945;'cos(&#945;)
+		</form>
+	</p>
+	<p>
+		<div class="checkbox-inline">
+			<label>
+				<input type="checkbox" id="backlash_checkbox" checked="checked">
+				Include gearbox backlash
+			</label>
+		</div>
+	</p>
+	
+	<button type="button" class="btn btn-default" id="run_button">Restart simulation</button><br>
+	<canvas id="rip_canvas" height="200" style="border: 1px solid rgb(0, 0, 0);"></canvas><br>
+	<script src="js/rip_model.js"></script>
+	
+	<p>Here is a short video of the real system performing the same task:</p>
+	<div class="row">
+		<div class="col-sm-6">
+			<div class="embed-responsive embed-responsive-16by9">
+				<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/IC8PydEJCXM"></iframe>
+			</div><br> 
+		</div>
+	</div>     
+</div>
+
+<footer class="container-fluid bg-dark text-center">
+	<p><small>Nils Morozs, Copyright &copy; 2016</small></p> 
+</footer>
+
+</body>
+</html>

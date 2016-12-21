@@ -1,5 +1,11 @@
+body {
+      font: 15px Montserrat, sans-serif;
+      line-height: 1.8;
+      color: #f5f6f7;
+}
+
 .bg-dark { 
-    background-color: #474e5d; /* Dark Blue */
+    background-color: #555555; /* Dark grey */
     color: #ffffff;
 }
 .bg-white { 
@@ -11,11 +17,12 @@
       padding-bottom: 30px;
 }
 .navbar {
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   border: 0;
   border-radius: 0;
   margin-bottom: 0;
+  font-size: 18px;
 }
 .navbar-nav  li a:hover {
   color: #1abc9c !important;
