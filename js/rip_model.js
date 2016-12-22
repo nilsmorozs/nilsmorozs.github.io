@@ -47,7 +47,7 @@ function getUIdata ()
 	var n;
 	
 	// Resize canvas to fit page width
-	ripCanvas.width = (document.getElementById('main_container').clientWidth)*0.97;
+	ripCanvas.width = (document.getElementById('main_container').clientWidth) - 25;
 	
 	// Parse UI inputs
 	for (n=0; n<4; n++)
