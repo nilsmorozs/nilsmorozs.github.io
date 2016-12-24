@@ -2,7 +2,6 @@ body {
       line-height: 1.8;
       color: #f5f6f7;
 }
-
 .bg-dark { 
     background-color: #555555; /* Dark grey */
     color: #ffffff;
@@ -15,9 +14,12 @@ body {
       padding-top: 30px;
       padding-bottom: 30px;
 }
+.page-heading-container {
+	padding-top: 70px;
+}
 .navbar {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 0px;
+  padding-bottom: 0px;
   border: 0;
   border-radius: 0;
   margin-bottom: 0;
