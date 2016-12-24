@@ -12,6 +12,7 @@ var K_textfields = new Array();
 var X_textfield;
 var backlashCheckbox;
 var ripCanvas;
+var pageWidth;
 
 window.requestAnimFrame = (function(callback) {
         return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame ||
@@ -47,7 +48,8 @@ function getUIdata ()
 	var n;
 	
 	// Resize canvas to fit page width
-	ripCanvas.width = (document.getElementById('main_container').clientWidth) - 25;
+	pageWidth = document.getElementById('main_container').clientWidth;
+	ripCanvas.width = pageWidth - 25;
 	
 	// Parse UI inputs
 	for (n=0; n<4; n++)
@@ -64,7 +66,7 @@ function getUIdata ()
 function runSfcExperiment()
 {
 	ripCanvas = document.getElementById('rip_canvas');
-   var ripContext = ripCanvas.getContext('2d');
+	var ripContext = ripCanvas.getContext('2d');
 	// Initial conditions
 	outputs = new Array(0, 0, 0, 0, -Math.PI, 0, 0, 0);
 	
@@ -111,6 +113,14 @@ function animate(canvas, context)
 	var wrapped_alpha;
 	var time;
 	var backlash;
+	var pw;
+	
+	//// Resize canvas to fit page width
+	pw = document.getElementById('main_container').clientWidth;
+	if (pw != pageWidth) {
+		pageWidth = pw;
+		ripCanvas.width = pageWidth - 25;
+	}
 	
 	//// Initialise backlash
 	if (backlashFlag)
