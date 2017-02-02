@@ -31,9 +31,3 @@ body {
 .navbar-nav  li a:hover {
   color: #1abc9c !important;
 }
-.footer {
-	position : absolute;
-    	bottom : 0;
-    	height : 40px;
-    	margin-top : 40px;
-}
