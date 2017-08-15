@@ -21,13 +21,46 @@ body {
 .page-heading-container {
 	padding-top: 70px;
 }
+.home-container {
+	min-height: 100vh;
+	padding-top: 60px;
+	font-size: 20px;
+	line-height: 2;
+	display: flex;
+	font-family: Montserrat, sans-serif;
+}
+.main-container {
+	min-height: 100vh;
+	padding-top: 60px;
+}
+.home-container .glyphicon {
+    font-size: 120px;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 30px;
+}
+.home-container a {
+	color: #555555;
+}
+.home-container a:hover {
+  color: #000000 !important;
+}
 .navbar {
-  padding-top: 0px;
-  padding-bottom: 0px;
-  border: 0;
-  border-radius: 0;
-  margin-bottom: 0;
+	margin-bottom: 0;
+	background-color: #ffffff;
+	z-index: 9999;
+	border: 0;
+	font-size: 18px !important;
+	line-height: 1.42857143 !important;
+	letter-spacing: 2px;
+	border-radius: 0;
+	font-family: Montserrat, sans-serif;
 }
 .navbar-nav  li a:hover {
   color: #1abc9c !important;
+}
+
+.navbar-nav li.active a {
+	color: #000000 !important;
+	background-color: #ffffff !important;
 }
