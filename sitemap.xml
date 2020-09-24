@@ -2,23 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
  
 <url>
-<loc>http://www.nilsmorozs.co.uk/</loc>
+<loc>http://nilsmorozs.github.io/</loc>
 </url>
 <url>
-<loc>http://www.nilsmorozs.co.uk/index.html</loc>
+<loc>http://nilsmorozs.github.io/index.html</loc>
 <changefreq>monthly</changefreq>
 </url>
 <url>
-<loc>http://www.nilsmorozs.co.uk/publications.html</loc>
+<loc>http://nilsmorozs.github.io/publications.html</loc>
 <changefreq>monthly</changefreq>
 <priority>1.0</priority>
 </url>
 <url>
-<loc>http://www.nilsmorozs.co.uk/cv.html</loc>
+<loc>http://nilsmorozs.github.io/cv.html</loc>
 <changefreq>monthly</changefreq>
 </url>
 <url>
-<loc>http://www.nilsmorozs.co.uk/control_demo.html</loc>
+<loc>http://nilsmorozs.github.io/control_demo.html</loc>
 <changefreq>monthly</changefreq>
 </url>
  
